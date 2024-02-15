@@ -54,8 +54,8 @@ state_initial = "NY"
 district_num = "1"
 
 county_name = "Santa Clara"
-# state_geojson = get_geojson_for_state(state_initial)
-# print(state_geojson)
+#state_geojson = get_geojson_for_state(state_initial)
+print(state_geojson)
 
 district_geojson = get_geojson_for_district(state_initial, district_num)
 print(district_geojson)
