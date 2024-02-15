@@ -16,7 +16,7 @@ def get_geojson_for_state(state_initial):
     else:
         print("Error fetching data")
 
-def get_geojson_for_district(state_initial, district_number):
+def get_geojson_for_district(state_initial, district_n`umber):
     district_year = get_district_year(state_initial, district_number);
     url = f"https://theunitedstates.io/districts/cds/{district_year}/{state_initial}-{district_number}/shape.geojson"
     response = requests.get(url)
@@ -26,9 +26,6 @@ def get_geojson_for_district(state_initial, district_number):
     else:
         print("Error fetching data")
 def get_county_geojson(state_initial, county_name):
-    district_number = get_district_number(state_initial, county_name)
-    district_effect_year = get_district_year(state_initial, county_name)
-
     # Fetch the data from the repository
     url = "google.com"
     response = requests.get(url)
@@ -50,9 +47,7 @@ def get_district_year(state_initial, district_id):
 # create a function that returns the county number based on the name.
 # database should include the following parameters:
 # state_name, state_initial, county_name, district_number, district_effect_year
-
 # pandas can also be used with SQL, json, html, etc. 
-
 
 # Example usage:
 state_initial = "NY"
