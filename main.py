@@ -38,18 +38,13 @@ def get_county_geojson(state_initial, county_name):
     else:
         print("Error fetching data")
 
-def get_district_number(state_initial, district_id):
+def get_district_year(state_initial, district_id):
     # Search and fetch data from a database or form
     df = pd.read_csv('us_districts.csv')
     search = df[(df["district_id"] == district_id) & (df['state_initial'] == state_initial)]
     if not search.empty:
         return search.iloc[0]['year_in_effect']
     else: return None
-
-def get_district_year(state_initial, district_number):
-    # TODO: Search the database / form for the associated district year using state and number
-    district_year = 2012
-    return district_year
 
 # TODO: create a database with all district names for each state, year the district came into effect.
 # create a function that returns the county number based on the name.
