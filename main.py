@@ -16,7 +16,7 @@ def get_geojson_for_state(state_initial):
     else:
         print("Error fetching data")
 
-def get_geojson_for_district(state_initial, district_n`umber):
+def get_geojson_for_district(state_initial, district_number):
     district_year = get_district_year(state_initial, district_number);
     url = f"https://theunitedstates.io/districts/cds/{district_year}/{state_initial}-{district_number}/shape.geojson"
     response = requests.get(url)
