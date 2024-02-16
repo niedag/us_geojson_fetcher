@@ -47,7 +47,7 @@ def get_district_year(state_initial, district_id):
 # create a function that returns the county number based on the name.
 # database should include the following parameters:
 # state_name, state_initial, county_name, district_number, district_effect_year
-# pandas can also be used with SQL, json, html, etc. 
+# pandas can also be used with SQL, json, html, etc.  
 
 # Example usage:
 state_initial = "NY"
